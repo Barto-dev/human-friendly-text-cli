@@ -12,16 +12,18 @@ app.get('/', (req, res) => {
     res.send('Hello Lloyd!');
 });
 app.get('/time', (req, res) => {
+    let response = {};
     if (!req.query.date) {
         const currentDate = (0, date_fns_1.format)(new Date(), 'h:mm');
-        res.json({ currentDate: (0, helpers_1.getHumanFriendlyTime)(currentDate) });
+        response = { currentDate: (0, helpers_1.getHumanFriendlyTime)(currentDate) };
     }
-    if ((0, helpers_1.checkTimeArg)(req.query.date)) {
-        res.json({ date: (0, helpers_1.getHumanFriendlyTime)(req.query.date) });
+    else if ((0, helpers_1.checkTimeArg)(req.query.date)) {
+        response = { date: (0, helpers_1.getHumanFriendlyTime)(req.query.date) };
     }
-    if (!(0, helpers_1.checkTimeArg)(req.query.date)) {
-        res.json({ invalidDate: 'Set a valid time in query param, for example date=11:30, date=1:42, date=12:15' });
+    else if (!(0, helpers_1.checkTimeArg)(req.query.date)) {
+        response = { invalidDate: 'Set a valid time in query param, for example date=11:30, date=1:42, date=12:15' };
     }
+    res.json(response);
 });
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);

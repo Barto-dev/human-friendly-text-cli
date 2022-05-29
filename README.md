@@ -3,6 +3,7 @@
 To run CLI you need to follow the following steps `git clone https://github.com/Barto-dev/human-friendly-text-cli.git`
 1. Clone this repository on your computer
 2. Install [node.js](https://nodejs.org/en/) v14 or higher
+3. Run `npm install` in terminal
 ___
 ### Objective 1
 Write a command-line program that returns the current time using the "Human Friendly Text" demonstrated in the example below.

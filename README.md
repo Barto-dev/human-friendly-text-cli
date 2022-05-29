@@ -19,4 +19,4 @@ Write a REST service to expose the clock and allow an optional parameter to pass
 ___
 1. In terminal run this command `npm run serve`
 2. Follow the link [http://localhost:3000/time](http://localhost:3000/time)
-3. Add query param in this format http://localhost:3000/time?data=11:30
+3. Add query param in this format http://localhost:3000/time?date=11:30

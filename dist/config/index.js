@@ -90,4 +90,3 @@ exports.hoursDescription = {
     '23': 'eleven',
     '00': 'twelve',
 };
-//# sourceMappingURL=index.js.map

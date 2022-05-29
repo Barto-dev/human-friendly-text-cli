@@ -68,4 +68,3 @@ const getHumanFriendlyTime = (time) => {
     }
 };
 exports.getHumanFriendlyTime = getHumanFriendlyTime;
-//# sourceMappingURL=index.js.map

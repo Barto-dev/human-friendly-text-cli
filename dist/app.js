@@ -28,4 +28,3 @@ app.get('/time', (req, res) => {
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);
 });
-//# sourceMappingURL=app.js.map

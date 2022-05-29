@@ -18,4 +18,3 @@ exports.currentTime = new commander_1.Command().command('current-time')
     const humanFriendlyTime = (0, helpers_1.getHumanFriendlyTime)(currentDate);
     console.log((0, helpers_1.capitalizeFirstLetter)(humanFriendlyTime));
 });
-//# sourceMappingURL=time.js.map

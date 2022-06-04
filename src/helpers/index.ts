@@ -18,23 +18,23 @@ const getNextHour = (hour: string): string => {
   }
 
   if (hour === '23') {
-    return '00'
+    return '00';
   }
 
   const nextHour = Number(hour) + 1;
   return nextHour.toString();
-}
+};
 
 // string matching check 00:00 - 23:59
 export const checkTimeArg = (time: string) => {
   const regEx = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/;
   return regEx.test(time);
-}
+};
 
 // Get time in format h:m (ex. 11:30, 12:56)
 export const getHumanFriendlyTime = (time: string) => {
   if (!checkTimeArg(time)) {
-    return 'Enter a valid time, for example 11:30, 1:42, 12:15'
+    return 'Enter a valid time, for example 11:30, 1:42, 12:15';
   }
 
   const timesInArr = time.split(':');
@@ -59,10 +59,10 @@ export const getHumanFriendlyTime = (time: string) => {
 
   if (minuteStrToNumber >= 1 && minuteStrToNumber < 30) {
     const minuteDescription = isNumberMultipleFive ? ' ' : ' minutes ';
-    return `${humanReadableMinutes}${minuteDescription}past ${humanReadableHours}`
+    return `${humanReadableMinutes}${minuteDescription}past ${humanReadableHours}`;
   }
 
-  if (Number(minutes) > 30 && Number(minutes) <=59) {
+  if (Number(minutes) > 30 && Number(minutes) <= 59) {
     const minuteDescription = isNumberMultipleFive ? ' ' : ' minutes ';
     const minutesToEndHour = 60 - minuteStrToNumber;
     // if we get 1 to end of our we transform this to '01' for get human-readable value
@@ -70,10 +70,10 @@ export const getHumanFriendlyTime = (time: string) => {
     const nextHour = getNextHour(hours);
     humanReadableMinutes = getHumanReadableNumberValue(minuteToStr, 'minutes');
     humanReadableHours = getHumanReadableNumberValue(nextHour, 'hours');
-    return `${humanReadableMinutes}${minuteDescription}to ${humanReadableHours}`
+    return `${humanReadableMinutes}${minuteDescription}to ${humanReadableHours}`;
   }
 
   if (time) {
     return time;
   }
-}
+};

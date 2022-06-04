@@ -4,7 +4,7 @@ import { getHumanFriendlyTime, capitalizeFirstLetter } from '../../helpers';
 
 export const time = new Command().command('time')
   .description('Return the time from arg using the Human Friendly Text')
-  .argument('<string>', 'time in the format hh:mm (e.g. 11:45, 23:31 etc...',)
+  .argument('<string>', 'time in the format hh:mm (e.g. 11:45, 23:31 etc...')
   .action((strings) => {
     const humanFriendlyTime = getHumanFriendlyTime(strings);
     console.log(capitalizeFirstLetter(humanFriendlyTime));

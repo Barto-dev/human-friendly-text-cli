@@ -4,7 +4,8 @@
     "esModuleInterop": true,
     "target": "es6",
     "moduleResolution": "node",
-    "outDir": "dist"
+    "outDir": "dist",
+    "noEmit": true
   },
   "lib": [
     "es2015"

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "tsc && node dist/app.js",
     "lint": "eslint . --ext .ts",
-    "serve": "node dist/app.js"
+    "serve": "node dist/app.js",
+    "server": "npx nodemon src/app.ts",
+    "cli": "tsc --watch --preserveWatchOutput"
   },
   "bin": "dist/index.js",
   "keywords": [],
